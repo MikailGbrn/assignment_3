@@ -42,5 +42,3 @@ if (toast == null) {
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.pressBack()
-
