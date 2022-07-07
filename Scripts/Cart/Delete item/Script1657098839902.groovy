@@ -16,6 +16,34 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
+import io.appium.java_client.AppiumDriver as AppiumDriver
 
 Mobile.startExistingApplication(GlobalVariable.appId, FailureHandling.STOP_ON_FAILURE)
+
+driver = MobileDriverFactory.getDriver()
+
+Mobile.tap(findTestObject('Produk/Pilih Produk'), 0)
+
+Mobile.tap(findTestObject('Produk/android.widget.Button - ADD TO CART'), 0)
+
+Mobile.setText(findTestObject('Produk/android.widget.EditText'), '1', 0)
+
+Mobile.tap(findTestObject('Produk/android.widget.Button - ADD'), 0)
+
+Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('Cart/cart_button'), 0)
+
+Mobile.verifyElementExist(findTestObject('Cart/item_cart'), 0)
+
+Mobile.tap(findTestObject('Cart/item_cart'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Cart/txt_confirmation_cart'), 0)
+
+Mobile.tap(findTestObject('Cart/btn_yes_clear_cart'), 40)
+
+Mobile.verifyElementExist(findTestObject('Cart/txt_whoops_cart_is_empty'), 40)
+
+driver.terminateApp(GlobalVariable.appId)
 
