@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Produk_Add-to-cart_5</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9a2cd995-cf16-4490-a973-1a61b262f8be</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>318ea608-5ae0-47f3-b73d-3dbf9ab99c48</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>fae9bf50-52e5-4ffd-9282-e44081e1b2ee</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1ce1d272-46e6-479a-8b25-b87c3196bbd8</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'100'</defaultValue>
+      <description></description>
+      <id>318ea608-5ae0-47f3-b73d-3dbf9ab99c48</id>
+      <masked>false</masked>
+      <name>setText100</name>
+   </variable>
+   <variable>
+      <defaultValue>'10'</defaultValue>
+      <description></description>
+      <id>fae9bf50-52e5-4ffd-9282-e44081e1b2ee</id>
+      <masked>false</masked>
+      <name>setText10</name>
+   </variable>
+   <variable>
+      <defaultValue>'5'</defaultValue>
+      <description></description>
+      <id>1ce1d272-46e6-479a-8b25-b87c3196bbd8</id>
+      <masked>false</masked>
+      <name>setText5</name>
+   </variable>
+</TestCaseEntity>

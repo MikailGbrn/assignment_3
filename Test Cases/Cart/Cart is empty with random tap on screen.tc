@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cart is empty with random tap on screen</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>be45b565-0bfc-4f44-9ab6-5c0d5c255152</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Produk_Add-to-cart_5 tapi dua kali</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>005ff457-2084-45f2-b626-86730efd6f09</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2405ce00-ed9f-45cf-85cc-68d9fe05bc0f</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f702f99b-b440-4591-b3d6-94a8381510e2</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>579f0d56-b02e-4bbc-ae56-4ab1952ce32a</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'100'</defaultValue>
+      <description></description>
+      <id>2405ce00-ed9f-45cf-85cc-68d9fe05bc0f</id>
+      <masked>false</masked>
+      <name>setText100</name>
+   </variable>
+   <variable>
+      <defaultValue>'10'</defaultValue>
+      <description></description>
+      <id>f702f99b-b440-4591-b3d6-94a8381510e2</id>
+      <masked>false</masked>
+      <name>setText10</name>
+   </variable>
+   <variable>
+      <defaultValue>'5'</defaultValue>
+      <description></description>
+      <id>579f0d56-b02e-4bbc-ae56-4ab1952ce32a</id>
+      <masked>false</masked>
+      <name>setText5</name>
+   </variable>
+</TestCaseEntity>
