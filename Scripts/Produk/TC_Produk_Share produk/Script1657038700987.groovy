@@ -22,15 +22,13 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication(GlobalVariable.appId, FailureHandling.STOP_ON_FAILURE)
 
-driver = MobileDriverFactory.getDriver()
-
 Mobile.tap(findTestObject('Produk/Pilih Produk'), 0)
 
 Mobile.tap(findTestObject('Produk/share button'), 0)
 
 Mobile.verifyElementExist(findTestObject('Produk/share text'), 0)
 
-Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+Mobile.pressBack()
 
-driver.terminateApp(GlobalVariable.appId)
+Mobile.pressBack()
 
