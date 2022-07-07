@@ -22,6 +22,8 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication(GlobalVariable.appId, FailureHandling.STOP_ON_FAILURE)
 
+driver2 = MobileDriverFactory.getDriver()
+
 Mobile.tap(findTestObject('Produk/Pilih Produk'), 0)
 
 Mobile.tap(findTestObject('Produk/tap kira-kira di tengah'), 0)
@@ -38,7 +40,5 @@ if (toast == null) {
     KeywordUtil.markFailed('ERROR: Toast object not found!')
 }
 
-Mobile.pressBack()
-
-Mobile.pressBack()
+driver2.terminateApp(GlobalVariable.appId)
 

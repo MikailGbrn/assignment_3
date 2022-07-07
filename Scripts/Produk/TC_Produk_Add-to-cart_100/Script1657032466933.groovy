@@ -22,6 +22,8 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication(GlobalVariable.appId, FailureHandling.STOP_ON_FAILURE)
 
+driver2 = MobileDriverFactory.getDriver()
+
 Mobile.tap(findTestObject('Produk/Pilih Produk'), 0)
 
 Mobile.tap(findTestObject('Produk/android.widget.Button - ADD TO CART'), 0)
@@ -30,6 +32,7 @@ Mobile.setText(findTestObject('Produk/android.widget.EditText'), setText100, 0)
 
 Mobile.tap(findTestObject('Produk/android.widget.Button - ADD'), 0)
 
+//driver for alert
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
 def toast = driver.findElementByXPath('//android.widget.Toast[@text=\'Stock is not enough\']')
@@ -42,5 +45,5 @@ if (toast == null) {
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.pressBack()
+driver2.terminateApp(GlobalVariable.appId)
 
