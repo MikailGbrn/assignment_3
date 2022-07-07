@@ -15,12 +15,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.By as By
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
 import io.appium.java_client.AppiumDriver as AppiumDriver
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication(GlobalVariable.appId, FailureHandling.STOP_ON_FAILURE)
+
+driver2 = MobileDriverFactory.getDriver()
 
 Mobile.tap(findTestObject('Produk/Pilih Produk'), 0)
 
@@ -46,10 +49,13 @@ Mobile.tap(findTestObject('Produk/android.widget.Button - ADD TO CART'), 0)
 
 Mobile.setText(findTestObject('Produk/android.widget.EditText'), setText5, 0)
 
-Mobile.tap(findTestObject('Produk/android.widget.Button - ADD'), 0)
+Mobile.tap(findTestObject('Produk/android.widget.Button - ADD'), 0, FailureHandling.OPTIONAL)
 
 AppiumDriver<?> driver2 = MobileDriverFactory.getDriver()
 
+//if (!(driver2.findElements(By.xpath('//android.widget.Toast[@text=\'Stock is not enough\']')))) {
+//    driver2 = MobileDriverFactory.getDriver()
+//}
 def toast2 = driver2.findElementByXPath('//android.widget.Toast[@text=\'Stock is not enough\']')
 
 println('Toast element: ' + toast)
@@ -60,5 +66,5 @@ if (toast2 == null) {
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.pressBack()
+driver2.terminateApp(GlobalVariable.appId)
 
